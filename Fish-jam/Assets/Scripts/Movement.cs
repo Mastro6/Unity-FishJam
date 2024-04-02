@@ -62,6 +62,7 @@ public class Movement : MonoBehaviour
             z = 0;
         }else if(lsnz.x==0){
             z = lookUp?Mathf.PI/2:-Mathf.PI/2;
+            z = lookRight?z:-z;
         }else{
             z = Mathf.Atan(lsnz.y / lsnz.x);
         }
