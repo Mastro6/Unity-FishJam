@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Prova1 : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Prova1 : MonoBehaviour
     void Start()
     {
         print("prova funzia");
+        print("ok");
     }
 
     // Update is called once per frame
