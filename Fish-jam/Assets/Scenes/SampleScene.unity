@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.0002617804
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -390,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -436,7 +436,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787460815}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
