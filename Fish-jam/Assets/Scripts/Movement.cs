@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     private bool lookRight;
 
     private bool lookUp;
-    Vector2 notZero;
+    Vector2 lsnz;
 
     // Start is called before the first frame update
     void Start()
@@ -44,9 +44,12 @@ public class Movement : MonoBehaviour
         vel = new Vector2(horizontal * speed, vertical * speed);
         rb.velocity = vel;
 
+        if(vel.magnitude != 0) lsnz = vel;
 
-        lookRight = vel.x==0?lookRight:vel.x>0;
-        lookUp = vel.y==0?lookUp:vel.y>0;
+
+
+        lookRight = lsnz.x==0?lookRight: lsnz.x>0;
+        lookUp = lsnz.y==0?lookUp: lsnz.y>0;
 
         Vector3 ls = transform.localScale;
 
@@ -55,12 +58,12 @@ public class Movement : MonoBehaviour
         transform.localScale = ls;
 
 
-        if(vel.x==0 && vel.y==0){
+        if(lsnz.x==0 && lsnz.y==0){
             z = 0;
-        }else if(vel.x==0){
+        }else if(lsnz.x==0){
             z = lookUp?Mathf.PI/2:-Mathf.PI/2;
         }else{
-            z = Mathf.Atan(vel.y / vel.x);
+            z = Mathf.Atan(lsnz.y / lsnz.x);
         }
 
         transform.eulerAngles = new Vector3(0, 0, z * 180 / Mathf.PI);
