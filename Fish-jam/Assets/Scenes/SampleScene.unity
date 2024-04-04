@@ -228,6 +228,7 @@ MonoBehaviour:
   height: 0
   width: 0
   center: {x: 0, y: 0}
+  closenessUnit: 1
 --- !u!1001 &121938973
 PrefabInstance:
   m_ObjectHideFlags: 0

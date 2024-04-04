@@ -51,7 +51,10 @@ public class JellyFish : MonoBehaviour
 
         } else
         {
+            if(!box.isPointFarFromEdges(transform.position)) PickNewDirection(); //if is moving towards the edges, change direction
+
             rb.MovePosition(transform.position + swimDirection * swimSpeed * Time.fixedDeltaTime);
+
         }
 
         fdsaixedDeltaTime = Time.fixedDeltaTime;
@@ -65,11 +68,11 @@ public class JellyFish : MonoBehaviour
         float randomAngle = Random.Range(0, 360);
         //swimDirection = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad), 0);
 
-        Vector2 randomPointInBox = box.chooseRandomPointInBox();
+        Vector2 randomPointInCenterBox = box.chooseRandomPointInCenterBox();
 
         Vector3 jellyFishPosition = transform.position;
 
-        swimDirection = (Vector3)randomPointInBox - jellyFishPosition;
+        swimDirection = (Vector3)randomPointInCenterBox - jellyFishPosition;
         swimDirection = swimDirection.normalized;
 
         timer = 0f;
