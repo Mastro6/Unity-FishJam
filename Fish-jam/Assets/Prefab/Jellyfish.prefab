@@ -100,12 +100,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  swimDuration: 2
   swimDurationRange: {x: 3, y: 5}
+  swimDuration: 2
   swimDirection: {x: 0, y: 0, z: 0}
-  swimSpeed: 1.5
+  swimSpeed: 2
   speedRotation: 200
   isRotating: 0
+  box: {fileID: 0}
+  fdsaixedDeltaTime: 0
 --- !u!50 &2854231764894505042
 Rigidbody2D:
   serializedVersion: 4

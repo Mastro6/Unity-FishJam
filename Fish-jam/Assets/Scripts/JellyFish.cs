@@ -18,13 +18,19 @@ public class JellyFish : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public Box box;
+
+    public float fdsaixedDeltaTime;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        timer = 0f;
+
+        box = GameObject.FindGameObjectWithTag("Box").GetComponent<Box>();
+
         PickNewDirection();
-        swimDuration = Random.Range(swimDurationRange.x, swimDurationRange.y);
+
     }
 
 
@@ -48,6 +54,8 @@ public class JellyFish : MonoBehaviour
             rb.MovePosition(transform.position + swimDirection * swimSpeed * Time.fixedDeltaTime);
         }
 
+        fdsaixedDeltaTime = Time.fixedDeltaTime;
+
     }
 
     void PickNewDirection()
@@ -55,9 +63,15 @@ public class JellyFish : MonoBehaviour
         
         //pick random direction, maybe better a vector that points toward inside the map
         float randomAngle = Random.Range(0, 360);
-        swimDirection = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad), 0);
+        //swimDirection = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad), 0);
 
-        
+        Vector2 randomPointInBox = box.chooseRandomPointInBox();
+
+        Vector3 jellyFishPosition = transform.position;
+
+        swimDirection = (Vector3)randomPointInBox - jellyFishPosition;
+        swimDirection = swimDirection.normalized;
+
         timer = 0f;
         swimDuration = Random.Range(swimDurationRange.x, swimDurationRange.y);
 

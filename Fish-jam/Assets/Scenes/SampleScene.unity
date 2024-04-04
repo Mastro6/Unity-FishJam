@@ -138,9 +138,10 @@ GameObject:
   m_Component:
   - component: {fileID: 84276379}
   - component: {fileID: 84276378}
+  - component: {fileID: 84276380}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,6 +213,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84276380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84276377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac64aaf43d264e4eb7f9be0cc89d29a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 0
+  width: 0
+  center: {x: 0, y: 0}
 --- !u!1001 &121938973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,11 +246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7519601081179097041, guid: 72d92ec0011ce55428d1b0a78bf60b6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.57
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 7519601081179097041, guid: 72d92ec0011ce55428d1b0a78bf60b6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6810764
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 7519601081179097041, guid: 72d92ec0011ce55428d1b0a78bf60b6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -647,11 +663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.52
+      value: -6.36
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.24
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: 7545654198083323719, guid: c71167a997c1d8c4fa1f730cf9d374dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -929,10 +945,6 @@ PrefabInstance:
       value: Jellyfish (1)
       objectReference: {fileID: 0}
     - target: {fileID: 9005007220949741834, guid: 3e7ade6d338edc644872a39256b291b4, type: 3}
-      propertyPath: swimSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005007220949741834, guid: 3e7ade6d338edc644872a39256b291b4, type: 3}
       propertyPath: swimDurationRange.x
       value: 2
       objectReference: {fileID: 0}
@@ -1001,10 +1013,6 @@ PrefabInstance:
     - target: {fileID: 3034393509492969501, guid: 3e7ade6d338edc644872a39256b291b4, type: 3}
       propertyPath: m_Name
       value: Jellyfish
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005007220949741834, guid: 3e7ade6d338edc644872a39256b291b4, type: 3}
-      propertyPath: swimSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9005007220949741834, guid: 3e7ade6d338edc644872a39256b291b4, type: 3}
       propertyPath: speedRotation
