@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public Box box;
 
     public Vector2 vel;
 
@@ -27,6 +28,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        box = GameObject.FindGameObjectWithTag("Box").GetComponent<Box>();
     }
 
     // Update is called once per frame
@@ -48,9 +50,10 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         
+
+
         rb.velocity = vel;
 
-        
 
         lookRight = lsnz.x==0?lookRight: lsnz.x>0;
         lookUp = lsnz.y==0?lookUp: lsnz.y>0;
@@ -61,7 +64,7 @@ public class Movement : MonoBehaviour
         
         transform.localScale = ls;
 
-
+                                                                                                            
         if(lsnz.x==0){
             z = lookUp?Mathf.PI/2:-Mathf.PI/2;
             z = lookRight?z:-z;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Box : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class Box : MonoBehaviour
     public Vector2 center;
 
     public float closenessUnit;
+
+    public float minBoundX { get => center.x - width/2;}
+    public float minBoundY { get => center.y - height/2;}
+    public float maxBoundX { get => center.x + width/2;}
+    public float maxBoundY { get => center.y + height/2;}
 
 
     // Start is called before the first frame update
